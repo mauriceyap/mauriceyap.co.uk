@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Diorama",
+    "subtitle": "A Docker-based distributed algorithm simulator",
+    "description": "My master's degree final year project. A browser-based simulator designed for use by lecturers to demonstrate the behaviour of distributed algorithms, and for students to write and test distributed algorithm implementations. Users can write algorithms in their choice of a range of available languages; define a network topology which can include automatically-generated nodes and the simulate this distributed network.",
+    "image": "diorama.png",
+    "url": "https://github.com/mauriceyap?tab=repositories&q=diorama"
+  }
+]

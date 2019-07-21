@@ -1,0 +1,1 @@
+Built by me with the help of [Next.js](https://nextjs.org/) and [Skeleton CSS](http://getskeleton.com) and hosted by [Netlify](https://www.netlify.com/).
