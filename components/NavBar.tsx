@@ -2,19 +2,20 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Component } from "react";
+import { LanguageConsumer } from "./LanguageProvider";
 
-const items: { href: string; name: string }[] = [
+const items: { href: string; name: { [language: string]: string } }[] = [
   {
     href: "/dev",
-    name: "dev"
+    name: { en: "dev", de: "Software-Entwicklung", zh: "软件开发" }
   },
   {
     href: "/music",
-    name: "music"
+    name: { en: "music", de: "Musik", zh: "音乐活动" }
   },
   {
     href: "/contact",
-    name: "contact"
+    name: { en: "contact", de: "Kontakt", zh: "联系" }
   }
 ];
 
@@ -37,51 +38,59 @@ export default class NavBar extends Component<
 
   render() {
     return (
-      <div id="navbar">
-        <div className="container">
-          <Link href="/">
-            <div id="website-title">Maurice Yap.</div>
-          </Link>
-          <div id="navbar-links-container">
-            {items.map(({ href, name }) => (
-              <div className="navbar-link" key={name}>
-                <Link href={href}>
-                  <a className="undecorated">{name}</a>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div id="navbar-menu-trigger-wrapper">
-            <input
-              id="navbar-menu-trigger"
-              type="checkbox"
-              onChange={this.setIsNavMenuVisible}
-            />
-            <label htmlFor="navbar-menu-trigger">
-              <FontAwesomeIcon
-                style={this.state.isNavMenuVisible ? { display: "none" } : {}}
-                icon={faBars}
-              />
-              <FontAwesomeIcon
-                style={this.state.isNavMenuVisible ? {} : { display: "none" }}
-                icon={faTimes}
-              />
-            </label>
-          </div>
-        </div>
-        <ul
-          className="navbar-menu"
-          style={this.state.isNavMenuVisible ? {} : { display: "none" }}
-        >
-          {items.map(({ href, name }) => (
-            <li className="navbar-menu-item" key={name}>
-              <Link href={href}>
-                <a className="undecorated">{name}</a>
+      <LanguageConsumer>
+        {({ language }) => (
+          <div id="navbar">
+            <div className="container">
+              <Link href="/">
+                <div id="website-title">Maurice Yap.</div>
               </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+              <div id="navbar-links-container">
+                {items.map(({ href, name }) => (
+                  <div className="navbar-link" key={href}>
+                    <Link href={href}>
+                      <a className="undecorated">{name[language]}</a>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              <div id="navbar-menu-trigger-wrapper">
+                <input
+                  id="navbar-menu-trigger"
+                  type="checkbox"
+                  onChange={this.setIsNavMenuVisible}
+                />
+                <label htmlFor="navbar-menu-trigger">
+                  <FontAwesomeIcon
+                    style={
+                      this.state.isNavMenuVisible ? { display: "none" } : {}
+                    }
+                    icon={faBars}
+                  />
+                  <FontAwesomeIcon
+                    style={
+                      this.state.isNavMenuVisible ? {} : { display: "none" }
+                    }
+                    icon={faTimes}
+                  />
+                </label>
+              </div>
+            </div>
+            <ul
+              className="navbar-menu"
+              style={this.state.isNavMenuVisible ? {} : { display: "none" }}
+            >
+              {items.map(({ href, name }) => (
+                <li className="navbar-menu-item" key={href}>
+                  <Link href={href}>
+                    <a className="undecorated">{name[language]}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </LanguageConsumer>
     );
   }
 }

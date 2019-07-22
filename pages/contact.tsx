@@ -16,6 +16,7 @@ import getMarkdownContent from "../utils/getMarkdownContent";
 import { MarkdownContent } from "../next-env";
 import contactAccountsData from "../data/contact.json";
 import "../css/contact.css";
+import { LanguageConsumer } from "../components/LanguageProvider";
 
 const MAGIC_EMAIL_ADDRESS_ELEMENT_ID: string = "MaGiCeMaIlAdDrEsSeLeMeNtId";
 const EMAIL_ADDRESS: string = "mauriceyap@hotmail.co.uk";
@@ -33,7 +34,7 @@ export default class Contact extends Component<
     this.state = {
       isEmailRevealed: false,
       mdContent: getMarkdownContent({
-        intro: "contact/intro.md"
+        intro: "contact/intro"
       })
     };
   }
@@ -70,75 +71,79 @@ export default class Contact extends Component<
   }
   render() {
     return (
-      <Fragment>
-        <Container>
-          <div className="row" id="contact-wrapper">
-            <div className="six columns">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.mdContent.intro.content
-                }}
-              />
-              <button
-                className="button-primary"
-                onClick={this.onRevealEmailButtonClick}
-                id="reveal-email-address"
-              >
-                My email address
-              </button>
-              <p id={MAGIC_EMAIL_ADDRESS_ELEMENT_ID} />
-            </div>
-            <div className="six columns" id="contact-accounts">
-              <p>
-                <FontAwesomeIcon icon={faFacebookMessenger} /> Messenger:{" "}
-                <a href={contactAccountsData.messenger.url}>
-                  {contactAccountsData.messenger.username}
-                </a>
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faLinkedin} /> LinkedIn:{" "}
-                <a href={contactAccountsData.linkedIn.url}>
-                  {contactAccountsData.linkedIn.username}
-                </a>
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faGithub} /> GitHub:{" "}
-                <a href={contactAccountsData.github.url}>
-                  {contactAccountsData.github.username}
-                </a>
-              </p>
+      <LanguageConsumer>
+        {({ language }) => (
+          <Fragment>
+            <Container>
+              <div className="row" id="contact-wrapper">
+                <div className="six columns">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.mdContent.intro[language].content
+                    }}
+                  />
+                  <button
+                    className="button-primary"
+                    onClick={this.onRevealEmailButtonClick}
+                    id="reveal-email-address"
+                  >
+                    My email address
+                  </button>
+                  <p id={MAGIC_EMAIL_ADDRESS_ELEMENT_ID} />
+                </div>
+                <div className="six columns" id="contact-accounts">
+                  <p>
+                    <FontAwesomeIcon icon={faFacebookMessenger} /> Messenger:{" "}
+                    <a href={contactAccountsData.messenger.url}>
+                      {contactAccountsData.messenger.username}
+                    </a>
+                  </p>
+                  <p>
+                    <FontAwesomeIcon icon={faLinkedin} /> LinkedIn:{" "}
+                    <a href={contactAccountsData.linkedIn.url}>
+                      {contactAccountsData.linkedIn.username}
+                    </a>
+                  </p>
+                  <p>
+                    <FontAwesomeIcon icon={faGithub} /> GitHub:{" "}
+                    <a href={contactAccountsData.github.url}>
+                      {contactAccountsData.github.username}
+                    </a>
+                  </p>
 
-              <p>
-                <FontAwesomeIcon icon={faInstagram} /> Instagram:{" "}
-                <a href={contactAccountsData.instagram.url}>
-                  {contactAccountsData.instagram.username}
-                </a>
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faYoutube} /> YouTube:{" "}
-                <a href={contactAccountsData.youTube.url}>
-                  {contactAccountsData.youTube.username}
-                </a>
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faSoundcloud} /> SoundCloud:{" "}
-                <a href={contactAccountsData.soundcloud.url}>
-                  {contactAccountsData.soundcloud.username}
-                </a>
-              </p>
-              <p>
-                <FontAwesomeIcon icon={faTwitter} /> Twitter:{" "}
-                <a href={contactAccountsData.twitter.url}>
-                  {contactAccountsData.twitter.username}
-                </a>
-              </p>
-            </div>
-          </div>
-        </Container>
-        <Head>
-          <title>Maurice Yap - Contact</title>
-        </Head>
-      </Fragment>
+                  <p>
+                    <FontAwesomeIcon icon={faInstagram} /> Instagram:{" "}
+                    <a href={contactAccountsData.instagram.url}>
+                      {contactAccountsData.instagram.username}
+                    </a>
+                  </p>
+                  <p>
+                    <FontAwesomeIcon icon={faYoutube} /> YouTube:{" "}
+                    <a href={contactAccountsData.youTube.url}>
+                      {contactAccountsData.youTube.username}
+                    </a>
+                  </p>
+                  <p>
+                    <FontAwesomeIcon icon={faSoundcloud} /> SoundCloud:{" "}
+                    <a href={contactAccountsData.soundcloud.url}>
+                      {contactAccountsData.soundcloud.username}
+                    </a>
+                  </p>
+                  <p>
+                    <FontAwesomeIcon icon={faTwitter} /> Twitter:{" "}
+                    <a href={contactAccountsData.twitter.url}>
+                      {contactAccountsData.twitter.username}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </Container>
+            <Head>
+              <title>Maurice Yap - Contact</title>
+            </Head>
+          </Fragment>
+        )}
+      </LanguageConsumer>
     );
   }
 }

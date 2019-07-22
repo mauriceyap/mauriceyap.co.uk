@@ -6,6 +6,7 @@ import { faYoutube, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
 import Container from "../components/Container";
 import getMarkdownContent from "../utils/getMarkdownContent";
 import { MarkdownContent } from "../next-env";
+import { LanguageConsumer } from "../components/LanguageProvider";
 
 export default class Music extends Component<
   {},
@@ -16,66 +17,70 @@ export default class Music extends Component<
 
     this.state = {
       mdContent: getMarkdownContent({
-        youTubeIntro: "music/youtube-intro.md",
-        soundCloudIntro: "music/soundcloud-intro.md",
-        mainIntro: "music/main-intro.md",
-        credits: "music/credits.md"
+        youTubeIntro: "music/youtube-intro",
+        soundCloudIntro: "music/soundcloud-intro",
+        mainIntro: "music/main-intro",
+        credits: "music/credits"
       })
     };
   }
   render() {
     return (
-      <Fragment>
-        <Container>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: this.state.mdContent.mainIntro.content
-            }}
-          />
-          <hr />
-          <div className="row">
-            <div className="six columns">
-              <h4>
-                <a
-                  href="https://www.youtube.com/user/mauriceyap/"
-                  className="undecorated"
-                >
-                  <FontAwesomeIcon icon={faYoutube} /> YouTube
-                </a>
-              </h4>
+      <LanguageConsumer>
+        {({ language }) => (
+          <Fragment>
+            <Container>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: this.state.mdContent.youTubeIntro.content
+                  __html: this.state.mdContent.mainIntro[language].content
                 }}
               />
-            </div>
-            <div className="six columns">
-              <h4>
-                <a
-                  href="https://soundcloud.com/maurice-yap"
-                  className="undecorated"
-                >
-                  <FontAwesomeIcon icon={faSoundcloud} /> SoundCloud
-                </a>
-              </h4>
+              <hr />
+              <div className="row">
+                <div className="six columns">
+                  <h4>
+                    <a
+                      href="https://www.youtube.com/user/mauriceyap/"
+                      className="undecorated"
+                    >
+                      <FontAwesomeIcon icon={faYoutube} /> YouTube
+                    </a>
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.mdContent.youTubeIntro[language].content
+                    }}
+                  />
+                </div>
+                <div className="six columns">
+                  <h4>
+                    <a
+                      href="https://soundcloud.com/maurice-yap"
+                      className="undecorated"
+                    >
+                      <FontAwesomeIcon icon={faSoundcloud} /> SoundCloud
+                    </a>
+                  </h4>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.mdContent.soundCloudIntro[language].content
+                    }}
+                  />
+                </div>
+              </div>
+              <hr />
               <div
                 dangerouslySetInnerHTML={{
-                  __html: this.state.mdContent.soundCloudIntro.content
+                  __html: this.state.mdContent.credits[language].content
                 }}
               />
-            </div>
-          </div>
-          <hr />
-          <div
-            dangerouslySetInnerHTML={{
-              __html: this.state.mdContent.credits.content
-            }}
-          />
-        </Container>
-        <Head>
-          <title>Maurice Yap - Music</title>
-        </Head>
-      </Fragment>
+            </Container>
+            <Head>
+              <title>Maurice Yap - Music</title>
+            </Head>
+          </Fragment>
+        )}
+      </LanguageConsumer>
     );
   }
 }
