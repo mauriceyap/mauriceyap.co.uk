@@ -25,14 +25,18 @@ export default class LanguageProvider extends Component<
 > {
   constructor(props) {
     super(props);
-    const browserLanguage: string = (navigator.languages !== undefined
-      ? navigator.languages[0]
-      : navigator.language
-    ).slice(0, 2);
-    const initialLanguage: string = languages.includes(browserLanguage)
-      ? browserLanguage
-      : DEFAULT_LANGUAGE;
-    this.state = { language: initialLanguage };
+    if (navigator) {
+      const browserLanguage: string = (navigator.languages !== undefined
+        ? navigator.languages[0]
+        : navigator.language
+      ).slice(0, 2);
+      const initialLanguage: string = languages.includes(browserLanguage)
+        ? browserLanguage
+        : DEFAULT_LANGUAGE;
+      this.state = { language: initialLanguage };
+    } else {
+      this.state = { language: DEFAULT_LANGUAGE };
+    }
     this.switchLanguage = this.switchLanguage.bind(this);
   }
   switchLanguage(language: string) {
