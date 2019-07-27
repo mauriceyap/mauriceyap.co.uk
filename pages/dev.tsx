@@ -8,6 +8,7 @@ import getMarkdownContent from "../utils/getMarkdownContent";
 import { MarkdownContent } from "../next-env";
 import projects from "../data/projects.json";
 import { LanguageConsumer } from "../components/LanguageProvider";
+import { dev as translations } from "../utils/extraTranslations.json";
 
 export default class Dev extends Component<
   {},
@@ -58,7 +59,8 @@ export default class Dev extends Component<
                   </h4>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: this.state.mdContent.linkedInIntro[language].content
+                      __html: this.state.mdContent.linkedInIntro[language]
+                        .content
                     }}
                   />
                 </div>
@@ -72,9 +74,12 @@ export default class Dev extends Component<
               {projects.length > 0 && (
                 <Fragment>
                   <hr />
-                  <div dangerouslySetInnerHTML={{
-                      __html: this.state.mdContent.projectsIntro[language].content
-                    }} />
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.mdContent.projectsIntro[language]
+                        .content
+                    }}
+                  />
                 </Fragment>
               )}
               <div className="row">
@@ -99,7 +104,7 @@ export default class Dev extends Component<
               </div>
             </Container>
             <Head>
-              <title>Maurice Yap - Software Projects</title>
+              <title>Maurice Yap - {translations.pageTitle[language]}</title>
             </Head>
           </Fragment>
         )}

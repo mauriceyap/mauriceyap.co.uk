@@ -3,19 +3,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Component } from "react";
 import { LanguageConsumer } from "./LanguageProvider";
+import { navBar as translations } from "../utils/extraTranslations.json";
 
-const items: { href: string; name: { [language: string]: string } }[] = [
+const items: { href: string; name: string }[] = [
   {
     href: "/dev",
-    name: { en: "dev", de: "Software-Entwicklung", zh: "软件开发" }
+    name: "dev"
   },
   {
     href: "/music",
-    name: { en: "music", de: "Musik", zh: "音乐活动" }
+    name: "music"
   },
   {
     href: "/contact",
-    name: { en: "contact", de: "Kontakt", zh: "联系" }
+    name: "contact"
   }
 ];
 
@@ -49,7 +50,7 @@ export default class NavBar extends Component<
                 {items.map(({ href, name }) => (
                   <div className="navbar-link" key={href}>
                     <Link href={href}>
-                      <a className="undecorated">{name[language]}</a>
+                      <a className="undecorated">{translations[name][language]}</a>
                     </Link>
                   </div>
                 ))}

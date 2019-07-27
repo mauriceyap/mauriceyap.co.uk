@@ -17,6 +17,7 @@ import { MarkdownContent } from "../next-env";
 import contactAccountsData from "../data/contact.json";
 import "../css/contact.css";
 import { LanguageConsumer } from "../components/LanguageProvider";
+import { contact as translations } from "../utils/extraTranslations.json";
 
 const MAGIC_EMAIL_ADDRESS_ELEMENT_ID: string = "MaGiCeMaIlAdDrEsSeLeMeNtId";
 const EMAIL_ADDRESS: string = "mauriceyap@hotmail.co.uk";
@@ -38,14 +39,14 @@ export default class Contact extends Component<
       })
     };
   }
-  onRevealEmailButtonClick() {
+  onRevealEmailButtonClick(language: string) {
     const revealEmailAddressButton = document.getElementById(
       "reveal-email-address"
     );
     revealEmailAddressButton.style.backgroundColor = COPIED_EMAIL_ADDRESS_GREEN;
     revealEmailAddressButton.style.borderColor = COPIED_EMAIL_ADDRESS_GREEN;
     revealEmailAddressButton.style.fontWeight = "700";
-    revealEmailAddressButton.innerText = "Copied email address to clipboard!";
+    revealEmailAddressButton.innerText = translations.copiedEmailAddress[language];
     const dummyNode: HTMLTextAreaElement = document.createElement("textarea");
     dummyNode.value = EMAIL_ADDRESS;
     revealEmailAddressButton.append(dummyNode);
@@ -62,7 +63,7 @@ export default class Contact extends Component<
     const emailAddressElement: HTMLElement = document.getElementById(
       MAGIC_EMAIL_ADDRESS_ELEMENT_ID
     );
-    emailAddressElement.innerText = "Loading...";
+    emailAddressElement.innerText = translations.loading[language];
     setTimeout(
       () =>
         (emailAddressElement.innerText = emailAddressElement.innerText = EMAIL_ADDRESS),
@@ -84,10 +85,10 @@ export default class Contact extends Component<
                   />
                   <button
                     className="button-primary"
-                    onClick={this.onRevealEmailButtonClick}
+                    onClick={() => this.onRevealEmailButtonClick(language)}
                     id="reveal-email-address"
                   >
-                    My email address
+                    {translations.myEmailAddress[language]}
                   </button>
                   <p id={MAGIC_EMAIL_ADDRESS_ELEMENT_ID} />
                 </div>
@@ -139,7 +140,7 @@ export default class Contact extends Component<
               </div>
             </Container>
             <Head>
-              <title>Maurice Yap - Contact</title>
+              <title>Maurice Yap - {translations.pageTitle[language]}</title>
             </Head>
           </Fragment>
         )}

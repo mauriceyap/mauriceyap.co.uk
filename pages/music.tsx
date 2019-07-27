@@ -7,6 +7,7 @@ import Container from "../components/Container";
 import getMarkdownContent from "../utils/getMarkdownContent";
 import { MarkdownContent } from "../next-env";
 import { LanguageConsumer } from "../components/LanguageProvider";
+import { music as translations } from "../utils/extraTranslations.json";
 
 export default class Music extends Component<
   {},
@@ -48,7 +49,8 @@ export default class Music extends Component<
                   </h4>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: this.state.mdContent.youTubeIntro[language].content
+                      __html: this.state.mdContent.youTubeIntro[language]
+                        .content
                     }}
                   />
                 </div>
@@ -63,7 +65,8 @@ export default class Music extends Component<
                   </h4>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: this.state.mdContent.soundCloudIntro[language].content
+                      __html: this.state.mdContent.soundCloudIntro[language]
+                        .content
                     }}
                   />
                 </div>
@@ -76,7 +79,7 @@ export default class Music extends Component<
               />
             </Container>
             <Head>
-              <title>Maurice Yap - Music</title>
+              <title>Maurice Yap - {translations.pageTitle[language]}</title>
             </Head>
           </Fragment>
         )}
