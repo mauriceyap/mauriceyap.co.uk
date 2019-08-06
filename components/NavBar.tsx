@@ -50,7 +50,9 @@ export default class NavBar extends Component<
                 {items.map(({ href, name }) => (
                   <div className="navbar-link" key={href}>
                     <Link href={href}>
-                      <a className="undecorated">{translations[name][language]}</a>
+                      <a className="undecorated">
+                        {translations[name][language]}
+                      </a>
                     </Link>
                   </div>
                 ))}
@@ -84,7 +86,9 @@ export default class NavBar extends Component<
               {items.map(({ href, name }) => (
                 <li className="navbar-menu-item" key={href}>
                   <Link href={href}>
-                    <a className="undecorated">{name[language]}</a>
+                    <a className="undecorated">
+                      {translations[name][language]}
+                    </a>
                   </Link>
                 </li>
               ))}
