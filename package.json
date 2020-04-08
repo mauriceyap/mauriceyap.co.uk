@@ -27,6 +27,6 @@
     "dev": "next",
     "build": "next build",
     "export": "next export",
-    "deploy": "yarn run build && yarn run export"
+    "deploy": "./scripts/deploy.sh"
   }
 }
