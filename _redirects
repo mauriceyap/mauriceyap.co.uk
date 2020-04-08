@@ -1,4 +1,4 @@
-https://blog.mauriceyap.co.uk/* https://s3.eu-west-2.amazonaws.com/files.mauriceyap.co.uk/:splat 200
+https://files.mauriceyap.co.uk/* https://s3.eu-west-2.amazonaws.com/files.mauriceyap.co.uk/:splat 200
 
 /files/* https://s3.eu-west-2.amazonaws.com/files.mauriceyap.co.uk/:splat
 
