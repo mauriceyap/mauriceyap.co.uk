@@ -30,14 +30,28 @@ img {
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 1.6rem 0 0.6rem;
-  box-shadow: 0 0 1rem 1rem white;
-  margin-bottom: 1rem;
+  padding: 1.6rem 0 0;
+  box-shadow: 0 0 1.6rem 1.6rem white;
+  margin-bottom: 1.6rem;
+}
+
+#navbar:after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 1080px;
+  height: 1px;
+  background-color: #eee;
 }
 
 @media (min-width: 550px) {
   #navbar {
-    padding: 3rem 0 2rem;
+    padding: 3rem 0 1rem;
+    box-shadow: 0 0 1rem 1rem white;
+    margin-bottom: 2rem;
   }
 }
 

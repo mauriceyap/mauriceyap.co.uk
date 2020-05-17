@@ -46,22 +46,26 @@ const Dev: FC<{}> = () => {
         </>
       )}
       <div className="row">
-        {projects.map(({ title, subtitle, description, image, url }) => (
-          <div className="six columns" key={title}>
-            <h4>
-              {title}
-              <br />
-              <small>{subtitle}</small>
-            </h4>
-            <a href={url}>
-              <img src={`/static/images/${image}`} alt={title} />
-            </a>
-            <p>{description}</p>
-            <a className="button" href={url}>
-              See more
-            </a>
-          </div>
-        ))}
+        {projects.map(
+          ({ title, subtitle, descriptionParagraphs, image, url }) => (
+            <div className="six columns" key={title}>
+              <h4>
+                {title}
+                <br />
+                <small>{subtitle}</small>
+              </h4>
+              <a href={url}>
+                <img src={`/static/images/${image}`} alt={title} />
+              </a>
+              {descriptionParagraphs.map((paragraph, i) => (
+                <p key={i} dangerouslySetInnerHTML={{ __html: paragraph }} />
+              ))}
+              <a className="button" href={url}>
+                See more
+              </a>
+            </div>
+          )
+        )}
       </div>
     </Container>
   );
