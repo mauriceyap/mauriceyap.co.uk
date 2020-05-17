@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i&display=swap");
 
-body, html {
+body,
+html {
   margin: 0;
   height: 100%;
   min-height: 100%;
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 img {
@@ -29,12 +30,14 @@ img {
   top: 0;
   width: 100%;
   z-index: 999;
-  padding: 1.6rem 0;
+  padding: 1.6rem 0 0.6rem;
+  box-shadow: 0 0 1rem 1rem white;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 550px) {
   #navbar {
-    padding: 3rem 0;
+    padding: 3rem 0 2rem;
   }
 }
 
@@ -152,5 +155,5 @@ a.undecorated {
 }
 
 a.undecorated:hover {
-  color: #0FA0CE;
+  color: #0fa0ce;
 }
