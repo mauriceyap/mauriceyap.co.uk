@@ -4,8 +4,6 @@ import { FC } from "react";
 import Container from "../components/Container";
 import MarkdownDisplay from "../components/MarkdownDisplay";
 
-import "../css/index.css";
-
 const Index: FC<{}> = () => (
   <Container>
     <Head>

@@ -1,1 +1,1 @@
-Built by me with the help of [Next.js](https://nextjs.org/) and [Skeleton CSS](http://getskeleton.com).
+Like spaghetti? Then you'll love [the source code 🍝](https://github.com/mauriceyap/mauriceyap.co.uk).

@@ -13,7 +13,6 @@ import {
 
 import Container from "../components/Container";
 import contactAccountsData from "../data/contact.json";
-import "../css/contact.css";
 import MarkdownDisplay from "../components/MarkdownDisplay";
 import useExtraTranslation from "../utils/useExtraTranslation";
 

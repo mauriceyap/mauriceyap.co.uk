@@ -1,12 +1,9 @@
 import dynamic from "next/dynamic";
 import { useContext, FC } from "react";
-import "skeleton-css/css/skeleton.css";
 
 import { languages } from "../data/config.json";
 import { languageContext } from "./languageContext";
 import MarkdownDisplay from "./MarkdownDisplay";
-
-import "../css/styles.css";
 
 const NavBar = dynamic(import("./NavBar"), { ssr: false });
 
