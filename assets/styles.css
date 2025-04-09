@@ -446,14 +446,8 @@ a:hover {
 
 .recording-credits-list {
   display: grid;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   width: fit-content;
-}
-
-@media screen and (min-width: 720px) {
-  .recording-credits-list {
-    gap: var(--spacing-md);
-  }
 }
 
 @media screen and (min-width: 1200px) {
