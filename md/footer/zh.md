@@ -1,1 +1,0 @@
-我使用[Next.js](https://nextjs.org/)和[Skeleton CSS](http://getskeleton.com)创建了这个网站.

@@ -1,1 +1,0 @@
-Von mir mit [Next.js](https://nextjs.org/) und [Skeleton CSS](http://getskeleton.com) erstellt.

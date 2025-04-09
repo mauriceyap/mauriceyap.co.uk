@@ -1,0 +1,28 @@
+[
+  {
+    "leadMd": "I built a *stock options calculator* for visualising the value of option allocations over time.",
+    "bodyMd": "Employee stock options form part of the compensation package for many roles. This simple web app calculates and visualises the estimated value of stock option allocations over time, applicable deductions (income tax, NI, CGT and student loan contributions) and the effective annual gain from vesting stock options.",
+    "primaryLinkHref": "https://github.com/mauriceyap/stock-options-calculator",
+    "primaryLinkText": "View the GitHub repo",
+    "secondaryLinkHref": "https://mauriceyap.github.io/stock-options-calculator",
+    "secondaryLinkText": "Try it out",
+    "backgroundColour": "#bcdbec",
+    "imageSrc": "/stock-options-calculator-screenshot.png"
+  },
+  {
+    "leadMd": "*Linguist Aid* was an initiative to connect multi-lingual volunteers with aid groups during the COVID-19 outbreak.",
+    "bodyMd": "I set up a website with a few friends to connect volunteers with mutual aid groups and charities in the UK for translating materials, and interpreting for vulnerable people who don't speak much English. It was featured on the website of Team London, the Mayor of London's volunteering programme.",
+    "primaryLinkHref": "https://github.com/mauriceyap/linguist-aid",
+    "primaryLinkText": "View the GitHub repo",
+    "backgroundColour": "#b9e2bb",
+    "imageSrc": "/linguist-aid-screenshot.png"
+  },
+  {
+    "leadMd": "My master's project was building a browser-based distributed algorithm simulator called *Diorama.*",
+    "bodyMd": "It was designed for use by computer science educators and students to implement, demonstrate and test the behaviour of distributed algorithms. Users can write algorithms in their choice of language, define a common (e.g. ring, line, star, fully-connected) or custom network topology, and simulate this distributed network.",
+    "primaryLinkHref": "/diorama-report.pdf",
+    "primaryLinkText": "Read the project report",
+    "backgroundColour": "#c6b9e2",
+    "imageSrc": "/diorama-screenshot.png"
+  }
+]

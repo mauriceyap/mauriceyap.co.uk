@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maurice Yap</title>
+    <meta
+      name="description"
+      content="Maurice Yap is an experienced full stack software engineer, based in London."
+    />
+
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="stylesheet" href="/modern-normalize.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/brands.min.css" rel="stylesheet" />
+    <link href="/fontawesome/css/solid.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <section id="home" class="screen-section screen-section--primary-bg">
+        <div class="screen-section__container">
+          <div>
+            <img id="hello-sticker" src="/laptop-wave.png" alt="Hello!" />
+          </div>
+          <div>
+            <h1>Hello! I'm <em>Maurice Yap.</em></h1>
+          </div>
+          <div class="lead">
+            <p>
+              I'm an experienced full stack software engineer, based in London.
+            </p>
+          </div>
+          <div class="buttons">
+            <a href="#connect" class="button button--primary">Connect</a>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="screen-section screen-section--primary-bg">
+        <div class="screen-section__container">
+          <div>
+            <h1 class="screen-section-heading">My work.</h1>
+          </div>
+          <div class="lead">
+            <p>
+              I am a software engineer with skills and experience across the
+              whole stack, including web and mobile
+              <em>front end development,</em> <em>UI design</em>,
+              <em>back end development</em> for distributed systems and
+              <em>cloud infrastructure engineering</em>. I also have experience
+              in <em>technical leadership</em> and <em>architecture</em>.
+            </p>
+          </div>
+          <div class="body">
+            <p>
+              I'm currently working at <em>G-Research</em> on the team building
+              <a href="https://armadaproject.io"
+                >Armada - a queue-based scheduler for batch compute jobs across
+                multiple Kubernetes clusters.</a
+              >
+              It is an open-source CNCF Sandbox project which is used in
+              production at massive scale.
+            </p>
+            <p>
+              Previously, I worked at <em>Thought Machine</em>, helping to build
+              modern cloud-based banking technology.
+            </p>
+            <p>
+              Before that, I completed internships at <em>FlexTrade</em> - a
+              company providing trading software, and <em>Gousto</em> - an
+              online meal kit retailer.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="software-projects"
+        class="screen-section screen-section--secondary-bg"
+      >
+        <div class="screen-section__container">
+          <div>
+            <h1 class="screen-section-heading">
+              Some of my other software projects.
+            </h1>
+          </div>
+          <div class="software-projects-grid">
+            {%- for project in softwareProjects -%}
+            <section class="software-projects-grid__item">
+              <div
+                class="software-projects-grid__item__mockup-container"
+                style="background-color: {{ project.backgroundColour }};"
+              >
+                <div class="software-projects-grid__item__mockup">
+                  <div
+                    class="software-projects-grid__item__mockup__image-container"
+                  >
+                    <img
+                      class="software-projects-grid__item__mockup__image"
+                      src="{{ project.imageSrc }}"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="lead">
+                <p>{{ project.leadMd | renderUsingMarkdown }}</p>
+              </div>
+              <div class="body">
+                <p>{{project.bodyMd | renderUsingMarkdown }}</p>
+              </div>
+              <div class="buttons">
+                {% if project.primaryLinkText and project.primaryLinkHref %}
+                <a
+                  href="{{project.primaryLinkHref}}"
+                  class="button button--primary"
+                  >{{project.primaryLinkText}}</a
+                >
+                {% endif %}{% if project.secondaryLinkText and
+                project.secondaryLinkHref %}
+                <a
+                  href="{{project.secondaryLinkHref}}"
+                  class="button button--secondary"
+                  >{{project.secondaryLinkText}}</a
+                >
+                {% endif %}
+              </div>
+            </section>
+            {%- endfor -%}
+          </div>
+        </div>
+      </section>
+      <section id="music" class="screen-section screen-section--primary-bg">
+        <div class="screen-section__container">
+          <div>
+            <h1 class="screen-section-heading">My music work.</h1>
+          </div>
+          <div class="lead">
+            <p>
+              Aside from software development, I also do a bit of music work. I
+              primarily play bass guitar and keyboards, and I regularly serve at
+              my church,
+              <a href="https://christchurchmayfair.org">Christ Church Mayfair</a
+              >, playing in the band during Sunday services.
+            </p>
+          </div>
+          <div>
+            <button
+              class="button button--secondary"
+              data-toggle-expand-id="recording-credits"
+            ></button>
+          </div>
+          <div id="recording-credits" class="screen-section__container">
+            <div>
+              <h2 class="screen-section-subheading">Recording credits</h2>
+            </div>
+            <div class="recording-credits-list">
+              {%- for credit in recordingCredits -%}
+              <div class="recording-credit-grid">
+                <div class="recording-credit-grid__year">{{ credit.year }}</div>
+                <div class="recording-credit-grid__title">
+                  {{ credit.title }} {% if credit.live %}<span
+                    class="recording-credit-grid__title__live"
+                    >Live</span
+                  >{% endif %}
+                </div>
+                <div class="recording-credit-grid__artists">
+                  {{ credit.artists | join: ', ' }}
+                </div>
+                <div class="recording-credit-grid__instruments">
+                  {%- for instrument in credit.instruments -%}
+                  <div class="recording-credit-grid__instruments__item">
+                    {{ instrument }}
+                  </div>
+                  {%- endfor -%}
+                </div>
+                {% if credit.spotifyId %}
+                <div class="recording-credit-grid__spotify-link">
+                  <a
+                    href="https://open.spotify.com/track/{{ credit.spotifyId }}"
+                  >
+                    <i class="fa-brands fa-spotify"></i> Listen on Spotify
+                  </a>
+                </div>
+                {% endif %}{% if credit.youTubeVideoId %}
+                <div class="recording-credit-grid__youtube-link">
+                  <a href="https://youtu.be/{{ credit.youTubeVideoId }}">
+                    <i class="fa-brands fa-youtube"></i> Watch on YouTube
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="connect" class="screen-section screen-section--secondary-bg">
+        <div class="screen-section__container">
+          <div>
+            <h1 class="screen-section-heading">Connect with me.</h1>
+          </div>
+          <div class="contact-grid">
+            <a
+              class="contact-grid__item"
+              href="https://linkedin.com/in/mauriceyap"
+            >
+              <div class="contact-grid__item__header">
+                <div class="contact-grid__item__header__icon">
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="contact-grid__item__header__tag">
+                  linkedin.com/in/mauriceyap
+                </div>
+              </div>
+              <div class="contact-grid__item__title">LinkedIn</div>
+              <div class="contact-grid__item__body">
+                My professional profile. As far as I know, it has not yet
+                appeared on r/LinkedInLunatics.
+              </div>
+              <div class="contact-grid__item__smallprint">
+                Like lots of people working in software engineering, I receive a
+                very high volume of messages from
+                <strong>recruiters</strong> (of which many are unfortunately
+                automated and irrelevant). I therefore can't respond to every
+                single message I receive so please don't take it personally if I
+                do not reply to yours! I will delete all recruitment messages
+                about roles which do not state a salary range as not being
+                upfront about compensation wastes time on both sides.
+              </div>
+            </a>
+            <a class="contact-grid__item" href="https://github.com/mauriceyap">
+              <div class="contact-grid__item__header">
+                <div class="contact-grid__item__header__icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="contact-grid__item__header__tag">mauriceyap</div>
+              </div>
+              <div class="contact-grid__item__title">GitHub</div>
+              <div class="contact-grid__item__body">
+                My open-source contributions and software projects, including
+                this website.
+              </div>
+            </a>
+            <div class="contact-grid__item contact-grid__item--email">
+              <div class="contact-grid__item__header">
+                <div class="contact-grid__item__header__icon">
+                  <i class="fa-solid fa-at"></i>
+                </div>
+              </div>
+              <div class="contact-grid__item__title">Email</div>
+              <div class="contact-grid__item__body">
+                Click to see my email address.
+              </div>
+            </div>
+            <a class="contact-grid__item" href="https://x.com/mauriceyap">
+              <div class="contact-grid__item__header">
+                <div class="contact-grid__item__header__icon">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <div class="contact-grid__item__header__tag">mauriceyap</div>
+              </div>
+              <div class="contact-grid__item__title">X, fka Twitter</div>
+              <div class="contact-grid__item__body">
+                I rarely tweet, so don’t expect much.
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="email.js"></script>
+    <script src="toggle-expand.js"></script>
+  </body>
+</html>
