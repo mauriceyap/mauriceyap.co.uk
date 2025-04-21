@@ -24,7 +24,7 @@
         // crawlers from getting, storing and publishing my email address.
         const emailAddress = [...Array(7)].reduce(
           (b) => atob(b).split(atob("TmFDbA=="))[0],
-          "Vm1wR2EwNUhSWGhUV0dST1ZtMW9WbGx0ZUV0alJsWnhWR3RPYUZKc2JETlhhMUpUWVZVeFdHUkVUbGRpV0ZKUVdWWlZlR050U2tWWGJHUlhaV3hhVlZacVNqUlhiVlpZVm10c2FsSnNXbFJhVjNSaFZWWmtjbHBFUWs5U01VcFlWakkxVjFaSFNrZFhia0pYWWtad00xVnRlR3RYUjFKR1YyeENWMkV3Y0ZoV1IzaHJZakZXY2sxWVZscGxiWGhXV1d4V1lWSldiSEpTVkd4UlZsUldiMVZVU2pOUVZUVm9VVEozUFU1aFEydz1OYUNs"
+          "Vm1wR1lWWXlSWGhYV0d4VlYwZDRWVmxVU205VlZscHpWbTFHYWxKc2NIaFZWM2gzWWtaS2RHUkVWbFZXYldoUVdWVmtTMU5XUm5OalJuQm9UV3hLTWxkV1pEUlNNRFZ6VjI1V1UySklRbkJaYkdoUFRrWmFSMWR0ZEZOaVZrWXpWR3hhYjJGR1NuSmpSVGxhWWxSR1UxUlhlR0ZUUjFaSFZHeGthR1ZyV2toV1JscHFUVlpXVjFkclZsTmlSVXBaVm0xNFlWVkdiRFpSVkVaVFZtMDVObGxyVlRGaFIwcFlWRlJXVjFKNlJraFZhMlJMVWxaYVZWVnJOVmRTVlZVMVZrY3hSMUpIU2tWaE0yUlFWa2RrTmxSdFJrUmlSRTAwVFZSUmVrNWhRMnd4TXpNNE5BPT1OYUNsNzIyODU="
         );
 
         elToMutate.innerText = emailAddress;
