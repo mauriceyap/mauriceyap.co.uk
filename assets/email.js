@@ -12,11 +12,23 @@
       }
 
       const originalText = elToMutate.innerText;
+
       let timeout;
+
+      const reset = () => {
+        timeout = undefined;
+        elToMutate.innerText = originalText;
+        elToMutate.parentNode.removeChild(
+          elToMutate.parentNode.getElementsByClassName(
+            "contact-grid__item--copied-chip"
+          )[0]
+        );
+      };
 
       emailGridItem.onclick = () => {
         if (timeout) {
           clearTimeout(timeout);
+          reset();
         }
 
         // This is not meant to be a demonstration of robust encryption. This
@@ -34,14 +46,7 @@
         );
         navigator.clipboard.writeText(emailAddress);
 
-        timeout = setTimeout(() => {
-          elToMutate.innerText = originalText;
-          elToMutate.parentNode.removeChild(
-            elToMutate.parentNode.getElementsByClassName(
-              "contact-grid__item--copied-chip"
-            )[0]
-          );
-        }, EMAIL_VISIBLE_TIMEOUT);
+        timeout = setTimeout(reset, EMAIL_VISIBLE_TIMEOUT);
       };
     }
   );
