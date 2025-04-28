@@ -45,6 +45,16 @@ export default function (eleventyConfig) {
     }, {}),
   });
 
+  eleventyConfig.addShortcode("preloadFonts", () =>
+    FONT_WEIGHTS.reduce(
+      (acc, weight) =>
+        acc +
+        `<link rel="preload" href="/bricolage-grotesque/files/bricolage-grotesque-latin-${weight}-normal.woff" as="font" type="font/woff" crossorigin>` +
+        `<link rel="preload" href="/bricolage-grotesque/files/bricolage-grotesque-latin-${weight}-normal.woff2" as="font" type="font/woff2" crossorigin>`,
+      ""
+    )
+  );
+
   const mdRender = new MarkdownIt();
   eleventyConfig.addFilter("renderUsingMarkdown", (rawString) =>
     mdRender.render(rawString)
