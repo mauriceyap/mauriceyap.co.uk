@@ -1,5 +1,14 @@
 [
   {
+    "year": "2025",
+    "title": "In Your Name We Go",
+    "live": true,
+    "artists": ["Ben Slee", "Co-Mission"],
+    "instruments": ["Bass"],
+    "spotifyId": "1iGbc5c2jBrXQ9MG3lBF7m",
+    "youTubeVideoId": "i9SK1hDX-ps"
+  },
+  {
     "year": "2024",
     "title": "And Can It Be",
     "live": true,
