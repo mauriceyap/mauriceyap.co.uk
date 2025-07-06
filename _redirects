@@ -2,4 +2,6 @@ https://files.mauriceyap.co.uk/* https://s3.eu-west-2.amazonaws.com/files.mauric
 
 /files/* https://s3.eu-west-2.amazonaws.com/files.mauriceyap.co.uk/:splat
 
+/notebooks/andrea-jonell-songs https://observablehq.com/embed/53345df29856310d
+
 /* /index.html  200
