@@ -7,6 +7,8 @@ const BRICOLAGE_GROTESQUE_SOURCE_DIR =
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
+    "_redirects": ".",
+    
     "assets/**/*": ".",
 
     "node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css":
