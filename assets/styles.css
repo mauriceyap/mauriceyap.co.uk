@@ -23,12 +23,12 @@
   --color-youtube-red: #ff0000;
 
   /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 20px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 52px;
+  --spacing-xs: 3px;
+  --spacing-sm: 6px;
+  --spacing-md: 10px;
+  --spacing-lg: 16px;
+  --spacing-xl: 26px;
+  --spacing-xxl: 36px;
 
   /* Shape */
   --border-width-light: 2px;
@@ -40,36 +40,36 @@
 
   /* Font */
   --font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
-  --font-size-heading: 48px;
-  --font-size-subheading: 20px;
-  --font-size-lead: 18px;
-  --font-size-body: 16px;
+  --font-size-heading: 36px;
+  --font-size-subheading: 18px;
+  --font-size-lead: 14px;
+  --font-size-body: 12px;
   --font-size-button: var(--font-size-body);
-  --font-size-headline: 48px;
-  --font-size-subheadline: 22px;
-  --font-size-recording-credit-value: 14px;
-  --font-size-contact-grid-item-title: 36px;
-  --font-size-contact-grid-item-body: 14px;
+  --font-size-headline: 32px;
+  --font-size-subheadline: 18px;
+  --font-size-recording-credit-value: 12px;
+  --font-size-contact-grid-item-title: 28px;
+  --font-size-contact-grid-item-body: 12px;
   --font-size-contact-grid-item-smallprint: 8px;
 
   @media screen and (min-width: 600px) {
-    --font-size-heading: 56px;
-    --font-size-subheading: 24px;
-    --font-size-lead: 20px;
-    --font-size-body: 18px;
-    --font-size-headline: 56px;
-    --font-size-subheadline: 26px;
-    --font-size-recording-credit-value: 16px;
-    --font-size-contact-grid-item-title: 40px;
-    --font-size-contact-grid-item-body: 16px;
+    --font-size-heading: 48px;
+    --font-size-subheading: 20px;
+    --font-size-lead: 16px;
+    --font-size-body: 14px;
+    --font-size-headline: 40px;
+    --font-size-subheadline: 22px;
+    --font-size-recording-credit-value: 14px;
+    --font-size-contact-grid-item-title: 36px;
+    --font-size-contact-grid-item-body: 14px;
   }
 
   @media screen and (min-width: 900px) {
-    --font-size-heading: 64px;
-    --font-size-lead: 24px;
-    --font-size-body: 20px;
-    --font-size-headline: 64px;
-    --font-size-subheadline: 30px;
+    --font-size-heading: 60px;
+    --font-size-lead: 22px;
+    --font-size-body: 18px;
+    --font-size-headline: 60px;
+    --font-size-subheadline: 28px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -164,25 +164,25 @@ a:hover {
 
 .screen-section {
   min-height: 100vh;
-  padding: 80px 24px;
+  padding: 40px 20px;
   justify-items: center;
 }
 
 @media screen and (min-width: 600px) {
   .screen-section {
-    padding: 90px 40px;
+    padding: 60px 30px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .screen-section {
-    padding: 100px 64px;
+    padding: 80px 64px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .screen-section {
-    padding: 120px 100px;
+    padding: 100px 100px;
   }
 }
 
@@ -297,12 +297,12 @@ a:hover {
 }
 
 #hello-sticker {
-  width: 210px;
+  width: 200px;
 }
 
 @media screen and (min-width: 600px) {
   #hello-sticker {
-    width: 260px;
+    width: 250px;
   }
 }
 
@@ -370,6 +370,27 @@ a:hover {
   overflow: hidden;
   position: relative;
   width: 100%;
+  max-width: 280px;
+  align-self: center;
+}
+
+@media screen and (min-width: 480px) {
+  .software-projects-grid__item__mockup-container {
+    max-width: 360px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .software-projects-grid__item__mockup-container {
+    max-width: 440px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .software-projects-grid__item__mockup-container {
+    /* TODO: max width */
+    max-width: unset;
+  }
 }
 
 .software-projects-grid__item__mockup-container:before {
@@ -421,7 +442,7 @@ a:hover {
 
 @media screen and (min-width: 900px) {
   #work {
-    background-size: 50vh;
+    background-size: 48vh;
   }
 }
 
@@ -441,7 +462,7 @@ a:hover {
 
 @media screen and (min-width: 900px) {
   #music {
-    background-size: 50vh;
+    background-size: 48vh;
   }
 }
 
@@ -484,7 +505,7 @@ a:hover {
       "year title title instruments"
       "year artists artists instruments"
       "year spotify-link youtube-link instruments";
-    grid-template-columns: 50px auto auto 200px;
+    grid-template-columns: 50px auto auto 180px;
     grid-template-rows: auto auto auto;
   }
 }
@@ -610,18 +631,18 @@ a:hover {
 
 .contact-grid__item {
   background-color: var(--color-bg-primary);
-  padding: var(--spacing-xl) var(--spacing-lg);
-  border-radius: var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: var(--spacing-md);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: color var(--transition-fast) ease-in-out,
     box-shadow var(--transition-fast) ease-in-out;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 420px) {
   .contact-grid__item {
     padding: var(--spacing-xxl) var(--spacing-xl);
   }
