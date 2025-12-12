@@ -1,6 +1,15 @@
 [
   {
     "year": "2025",
+    "title": "Emmanuel Has Come",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass synth"],
+    "spotifyId": "0IQeXeHb103G3v45GqSVZ3",
+    "youTubeVideoId": "STTjLydL9HM"
+  },
+  {
+    "year": "2025",
     "title": "In Your Name We Go",
     "live": true,
     "artists": ["Ben Slee", "Co-Mission"],
