@@ -40,62 +40,26 @@
 
   /* Font */
   --font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
-  --font-size-heading: 40px;
+  --font-size-heading: 36px;
   --font-size-subheading: 24px;
-  --font-size-lead: 19px;
+  --font-size-lead: 20px;
   --font-size-body: 16px;
-  --font-size-button: var(--font-size-body);
-  --font-size-headline: 56px;
-  --font-size-subheadline: 28px;
-  --font-size-recording-credit-value: 13px;
-  --font-size-contact-grid-item-title: 32px;
-  --font-size-contact-grid-item-body: 13px;
-  --font-size-contact-grid-item-smallprint: 10px;
-
-  @media screen and (min-width: 600px) {
-    --font-size-heading: 48px;
-    --font-size-subheading: 26px;
-    --font-size-lead: 20px;
-    --font-size-body: 17px;
-    --font-size-headline: 68px;
-    --font-size-subheadline: 32px;
-    --font-size-recording-credit-value: 14px;
-    --font-size-contact-grid-item-title: 40px;
-    --font-size-contact-grid-item-body: 14px;
-  }
+  --font-size-button: 18px;
+  --font-size-headline: 36px;
+  --font-size-subheadline: 20px;
+  --font-size-recording-credit-value: 14px;
+  --font-size-contact-grid-item-title: 30px;
+  --font-size-contact-grid-item-body: 18px;
+  --font-size-contact-grid-item-smallprint: 12px;
 
   @media screen and (min-width: 900px) {
-    --font-size-heading: 56px;
-    --font-size-subheading: 28px;
-    --font-size-lead: 22px;
-    --font-size-body: 18px;
-    --font-size-headline: 84px;
-    --font-size-subheadline: 36px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    --font-size-heading: 64px;
+    --font-size-heading: 48px;
     --font-size-subheading: 30px;
     --font-size-lead: 24px;
-    --font-size-body: 19px;
-    --font-size-headline: 96px;
-    --font-size-subheadline: 40px;
-    --font-size-contact-grid-item-title: 44px;
-    --font-size-contact-grid-item-body: 18px;
-    --font-size-contact-grid-item-smallprint: 11px;
-  }
-
-  @media screen and (min-width: 1536px) {
-    --font-size-heading: 72px;
-    --font-size-subheading: 32px;
-    --font-size-lead: 26px;
-    --font-size-body: 20px;
-    --font-size-headline: 108px;
-    --font-size-subheadline: 44px;
-    --font-size-recording-credit-value: 18px;
-    --font-size-contact-grid-item-title: 52px;
-    --font-size-contact-grid-item-body: 20px;
-    --font-size-contact-grid-item-smallprint: 12px;
+    --font-size-body: 18px;
+    --font-size-button: 20px;
+    --font-size-headline: 60px;
+    --font-size-subheadline: 24px;
   }
 }
 
@@ -316,12 +280,6 @@ a:hover {
 @media screen and (min-width: 900px) {
   #hello-sticker {
     width: 300px;
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  #hello-sticker {
-    width: 360px;
   }
 }
 
