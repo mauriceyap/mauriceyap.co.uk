@@ -245,7 +245,13 @@ a:hover {
 }
 
 #home h1 em {
-  color: var(--color-primary);
+  background: linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-text-primary), var(--color-primary) 30%),
+      var(--color-primary)
+    )
+    text;
+  -webkit-text-fill-color: transparent;
   font-style: normal;
 }
 
