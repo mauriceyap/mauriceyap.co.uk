@@ -1,5 +1,14 @@
 [
   {
+    "year": "2026",
+    "title": "Jesus My Shepherd",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass"],
+    "spotifyId": "12VZWNKrNkTtcKrTQL1Q4w",
+    "youTubeVideoId": "69lSeu1LcZA"
+  },
+  {
     "year": "2025",
     "title": "Emmanuel Has Come",
     "live": true,
