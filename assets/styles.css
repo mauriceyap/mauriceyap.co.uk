@@ -669,3 +669,22 @@ a:hover {
   padding: var(--spacing-xs);
   border-radius: var(--spacing-xs);
 }
+
+.footer {
+  min-height: unset;
+}
+
+.footer-content-container {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--spacing-xl);
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright-notice {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body);
+  font-weight: 200;
+}
