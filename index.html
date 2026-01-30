@@ -1,13 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maurice Yap</title>
+    <title>Maurice Yap - Full Stack Software Engineer | London</title>
     <meta
       name="description"
-      content="Maurice Yap is an experienced full stack software engineer, based in London."
+      content="Maurice Yap is an experienced full stack software engineer based in London, working on distributed systems, cloud infrastructure, and web development. Currently at G-Research building Armada."
     />
+    <meta name="author" content="Maurice Yap" />
+    <meta
+      name="keywords"
+      content="Maurice Yap, software engineer, full stack developer, London, G-Research, Armada, Kubernetes, distributed systems, cloud infrastructure, web development"
+    />
+    <link rel="canonical" href="https://mauriceyap.co.uk/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mauriceyap.co.uk/" />
+    <meta
+      property="og:title"
+      content="Maurice Yap - Full Stack Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Experienced full stack software engineer based in London, specialising in distributed systems, cloud infrastructure, and web development."
+    />
+    <meta property="og:image" content="https://mauriceyap.co.uk/icon.png" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:site_name" content="Maurice Yap" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://mauriceyap.co.uk/" />
+    <meta
+      name="twitter:title"
+      content="Maurice Yap - Full Stack Software Engineer"
+    />
+    <meta
+      name="twitter:description"
+      content="Experienced full stack software engineer based in London, specialising in distributed systems, cloud infrastructure, and web development."
+    />
+    <meta name="twitter:image" content="https://mauriceyap.co.uk/icon.png" />
+    <meta name="twitter:creator" content="@mauriceyap" />
+    <meta name="twitter:site" content="@mauriceyap" />
+
+    <!-- Geo tags -->
+    <meta name="geo.region" content="GB-LND" />
+    <meta name="geo.placename" content="London" />
 
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="apple-touch-icon" href="/icon.png" />
@@ -20,13 +60,58 @@
     <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
     <link href="/fontawesome/css/brands.min.css" rel="stylesheet" />
     <link href="/fontawesome/css/solid.min.css" rel="stylesheet" />
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maurice Yap",
+        "url": "https://mauriceyap.co.uk",
+        "image": "https://mauriceyap.co.uk/icon.png",
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "G-Research"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "London",
+          "addressCountry": "GB"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Imperial College London"
+        },
+        "sameAs": [
+          "https://github.com/mauriceyap",
+          "https://linkedin.com/in/mauriceyap",
+          "https://x.com/mauriceyap"
+        ],
+        "knowsAbout": [
+          "Software Engineering",
+          "Full Stack Development",
+          "Distributed Systems",
+          "Cloud Infrastructure",
+          "Kubernetes",
+          "Web Development",
+          "UI Design",
+          "Technical Leadership"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="container">
       <section id="home" class="screen-section screen-section--primary-bg">
         <div class="screen-section__container">
           <div>
-            <img id="hello-sticker" src="/laptop-wave.png" alt="Hello!" />
+            <img
+              id="hello-sticker"
+              src="/laptop-wave.png"
+              alt="Maurice Yap waving from a laptop"
+              loading="eager"
+            />
           </div>
           <div>
             <h1>Hello! I'm <em>Maurice Yap.</em></h1>
@@ -59,7 +144,7 @@
           <div class="body">
             <p>
               I'm currently working at <em>G-Research</em> on the team building
-              <a href="https://armadaproject.io"
+              <a href="https://armadaproject.io" rel="noopener"
                 >Armada - a queue-based scheduler for batch compute jobs across
                 multiple Kubernetes clusters.</a
               >
@@ -102,6 +187,8 @@
                     <img
                       class="software-projects-grid__item__mockup__image"
                       src="{{ project.imageSrc }}"
+                      alt="Screenshot of {{ project.title }}"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -117,6 +204,7 @@
                 <a
                   href="{{project.primaryLinkHref}}"
                   class="button button--primary"
+                  rel="noopener"
                   >{{project.primaryLinkText}}</a
                 >
                 {% endif %}{% if project.secondaryLinkText and
@@ -124,6 +212,7 @@
                 <a
                   href="{{project.secondaryLinkHref}}"
                   class="button button--secondary"
+                  rel="noopener"
                   >{{project.secondaryLinkText}}</a
                 >
                 {% endif %}
@@ -143,7 +232,8 @@
               Aside from software development, I also do a bit of music work. I
               primarily play bass guitar and keyboards, and I regularly serve at
               my church,
-              <a href="https://christchurchmayfair.org">Christ Church Mayfair</a
+              <a href="https://christchurchmayfair.org" rel="noopener"
+                >Christ Church Mayfair</a
               >, playing in the band during Sunday services.
             </p>
           </div>
@@ -181,13 +271,17 @@
                 <div class="recording-credit-grid__spotify-link">
                   <a
                     href="https://open.spotify.com/track/{{ credit.spotifyId }}"
+                    rel="noopener"
                   >
                     <i class="fa-brands fa-spotify"></i> Listen on Spotify
                   </a>
                 </div>
                 {% endif %}{% if credit.youTubeVideoId %}
                 <div class="recording-credit-grid__youtube-link">
-                  <a href="https://youtu.be/{{ credit.youTubeVideoId }}">
+                  <a
+                    href="https://youtu.be/{{ credit.youTubeVideoId }}"
+                    rel="noopener"
+                  >
                     <i class="fa-brands fa-youtube"></i> Watch on YouTube
                   </a>
                 </div>
@@ -207,6 +301,7 @@
             <a
               class="contact-grid__item"
               href="https://linkedin.com/in/mauriceyap"
+              rel="noopener"
             >
               <div class="contact-grid__item__header">
                 <div class="contact-grid__item__header__icon">
@@ -232,7 +327,11 @@
                 upfront about compensation wastes time on both sides.
               </div>
             </a>
-            <a class="contact-grid__item" href="https://github.com/mauriceyap">
+            <a
+              class="contact-grid__item"
+              href="https://github.com/mauriceyap"
+              rel="noopener"
+            >
               <div class="contact-grid__item__header">
                 <div class="contact-grid__item__header__icon">
                   <i class="fa-brands fa-github"></i>
@@ -256,7 +355,11 @@
                 Click to see my email address.
               </div>
             </div>
-            <a class="contact-grid__item" href="https://x.com/mauriceyap">
+            <a
+              class="contact-grid__item"
+              href="https://x.com/mauriceyap"
+              rel="noopener"
+            >
               <div class="contact-grid__item__header">
                 <div class="contact-grid__item__header__icon">
                   <i class="fa-brands fa-x-twitter"></i>
@@ -275,10 +378,11 @@
         <div class="screen-section__container">
           <div class="footer-content-container">
             <div>
-              <a href="https://notbyai.fyi"
+              <a href="https://notbyai.fyi" rel="noopener"
                 ><img
                   src="/written-by-a-human-not-by-ai.svg"
-                  alt="Written by a human, not by AI"
+                  alt="Written by a human, not by AI badge"
+                  loading="lazy"
               /></a>
             </div>
             <div class="copyright-notice">
