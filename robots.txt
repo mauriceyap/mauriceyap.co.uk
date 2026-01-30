@@ -1,0 +1,12 @@
+# robots.txt for mauriceyap.co.uk
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mauriceyap.co.uk/sitemap.xml
+
+# Block crawlers from accessing raw assets that don't provide value
+Disallow: /node_modules/
+Disallow: /*.js$
+Disallow: /*.css$
