@@ -54,6 +54,11 @@
 
     <meta name="theme-color" content="#000000" />
 
+    <!-- Resource hints for external domains -->
+    <link rel="dns-prefetch" href="https://open.spotify.com" />
+    <link rel="dns-prefetch" href="https://youtu.be" />
+    <link rel="dns-prefetch" href="https://github.com" />
+
     {% preloadFonts %}
     <link rel="stylesheet" href="/modern-normalize.css" />
     <link rel="stylesheet" href="/styles.css" />
@@ -110,6 +115,8 @@
               id="hello-sticker"
               src="/laptop-wave.png"
               alt="Maurice Yap waving from a laptop"
+              width="1592"
+              height="1592"
               loading="eager"
             />
           </div>
@@ -188,6 +195,8 @@
                       class="software-projects-grid__item__mockup__image"
                       src="{{ project.imageSrc }}"
                       alt="Screenshot of {{ project.title }}"
+                      width="{{ project.imageWidth }}"
+                      height="{{ project.imageHeight }}"
                       loading="lazy"
                     />
                   </div>
@@ -382,19 +391,19 @@
                 ><img
                   src="/written-by-a-human-not-by-ai.svg"
                   alt="Written by a human, not by AI badge"
+                  width="131"
+                  height="42"
                   loading="lazy"
               /></a>
             </div>
             <div class="copyright-notice">
-              &copy; Maurice Yap <span id="current-year"></span>. All rights
-              reserved.
+              &copy; Maurice Yap {% currentYear %}. All rights reserved.
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <script src="email.js"></script>
-    <script src="toggle-expand.js"></script>
-    <script src="populate-current-year.js"></script>
+    <script src="email.js" defer></script>
+    <script src="toggle-expand.js" defer></script>
   </body>
 </html>

@@ -275,6 +275,7 @@ a:hover {
 
 #hello-sticker {
   width: 200px;
+  height: auto;
 }
 
 @media screen and (min-width: 600px) {
