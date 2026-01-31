@@ -8,7 +8,9 @@
     "secondaryLinkHref": "https://mauriceyap.github.io/stock-options-calculator",
     "secondaryLinkText": "Try it out",
     "backgroundColour": "#bcdbec",
-    "imageSrc": "/stock-options-calculator-screenshot.png"
+    "imageSrc": "/stock-options-calculator-screenshot.png",
+    "imageWidth": 1440,
+    "imageHeight": 1644
   },
   {
     "name": "Linguist Aid",
@@ -17,7 +19,9 @@
     "primaryLinkHref": "https://github.com/mauriceyap/linguist-aid",
     "primaryLinkText": "View the GitHub repo",
     "backgroundColour": "#b9e2bb",
-    "imageSrc": "/linguist-aid-screenshot.png"
+    "imageSrc": "/linguist-aid-screenshot.png",
+    "imageWidth": 1934,
+    "imageHeight": 1444
   },
   {
     "name": "Diorama",
@@ -26,6 +30,8 @@
     "primaryLinkHref": "/diorama-report.pdf",
     "primaryLinkText": "Read the project report",
     "backgroundColour": "#c6b9e2",
-    "imageSrc": "/diorama-screenshot.png"
+    "imageSrc": "/diorama-screenshot.png",
+    "imageWidth": 2716,
+    "imageHeight": 1598
   }
 ]

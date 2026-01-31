@@ -2,6 +2,7 @@ import htmlmin from "html-minifier-terser";
 import MarkdownIt from "markdown-it";
 
 const FONT_WEIGHTS = [200, 300, 400, 500, 600, 700, 800];
+const PRELOAD_FONT_WEIGHTS = [400, 700]; // Only preload critical weights
 const BRICOLAGE_GROTESQUE_SOURCE_DIR =
   "node_modules/@fontsource/bricolage-grotesque";
 
@@ -47,7 +48,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("preloadFonts", () =>
-    FONT_WEIGHTS.reduce(
+    PRELOAD_FONT_WEIGHTS.reduce(
       (acc, weight) =>
         acc +
         `<link rel="preload" href="/bricolage-grotesque/files/bricolage-grotesque-latin-${weight}-normal.woff" as="font" type="font/woff" crossorigin>` +
@@ -55,6 +56,8 @@ export default function (eleventyConfig) {
       ""
     )
   );
+
+  eleventyConfig.addShortcode("currentYear", () => new Date().getFullYear());
 
   const mdRender = new MarkdownIt();
   eleventyConfig.addFilter("renderUsingMarkdown", (rawString) =>
