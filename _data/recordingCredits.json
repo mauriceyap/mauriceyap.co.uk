@@ -1,6 +1,15 @@
 [
   {
     "year": "2026",
+    "title": "None Shall Separate",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass synth"],
+    "spotifyId": "0zTZIZoOjRwNRm05uZN9hP",
+    "youTubeVideoId": "XtindMxFEk4"
+  },
+  {
+    "year": "2026",
     "title": "Jesus My Shepherd",
     "live": true,
     "artists": ["Ben Slee", "Christ Church Mayfair"],
