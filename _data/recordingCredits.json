@@ -1,6 +1,15 @@
 [
   {
     "year": "2026",
+    "title": "O Come And Kneel Before The Cross",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass", "Bass synth"],
+    "spotifyId": "34LRwfsI5YBq8fsZ14uuio",
+    "youTubeVideoId": "2l4UMBVQvfg"
+  },
+  {
+    "year": "2026",
     "title": "None Shall Separate",
     "live": true,
     "artists": ["Ben Slee", "Christ Church Mayfair"],
