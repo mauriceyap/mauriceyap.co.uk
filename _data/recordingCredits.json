@@ -1,11 +1,29 @@
 [
   {
     "year": "2026",
+    "title": "Hallelujah! What a Saviour",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass synth"],
+    "spotifyId": "7BwFxXSUK3QYTTWgAI9Mdb",
+    "youTubeVideoId": "8xcDCPrJAxQ"
+  },
+  {
+    "year": "2026",
+    "title": "See The Bloodstained Wooden Cross",
+    "live": true,
+    "artists": ["Ben Slee", "Christ Church Mayfair"],
+    "instruments": ["Bass synth"],
+    "spotifyId": "6muORtdkGz74ndeiwLsUwt",
+    "youTubeVideoId": "_fqwm-2jYAA"
+  },
+  {
+    "year": "2026",
     "title": "O Come And Kneel Before The Cross",
     "live": true,
     "artists": ["Ben Slee", "Christ Church Mayfair"],
     "instruments": ["Bass", "Bass synth"],
-    "spotifyId": "34LRwfsI5YBq8fsZ14uuio",
+    "spotifyId": "3R3eYVSTFc6vyBUCLsw68c",
     "youTubeVideoId": "2l4UMBVQvfg"
   },
   {
@@ -14,7 +32,7 @@
     "live": true,
     "artists": ["Ben Slee", "Christ Church Mayfair"],
     "instruments": ["Bass synth"],
-    "spotifyId": "0zTZIZoOjRwNRm05uZN9hP",
+    "spotifyId": "1hkBSlijzP0SIWeyl7fbIs",
     "youTubeVideoId": "XtindMxFEk4"
   },
   {
@@ -23,7 +41,7 @@
     "live": true,
     "artists": ["Ben Slee", "Christ Church Mayfair"],
     "instruments": ["Bass"],
-    "spotifyId": "12VZWNKrNkTtcKrTQL1Q4w",
+    "spotifyId": "4awMcXppVQt4Uj9WKuXDGK",
     "youTubeVideoId": "69lSeu1LcZA"
   },
   {
