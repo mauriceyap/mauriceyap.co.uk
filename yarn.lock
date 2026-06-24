@@ -652,9 +652,9 @@ linkify-it@^5.0.0:
     uc.micro "^2.0.0"
 
 liquidjs@^10.25.0:
-  version "10.25.7"
-  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.25.7.tgz#75c5765ae42e04da30fba15ae20daab57c4a7a8c"
-  integrity sha512-rPCjJLiD4eDhQjvv964AeXFC+HbeYBbZrd7Z82Q6hqv1lX7G+5w4SJcKLn9CAAAwHI4aS3dTdo083UB79K3pDA==
+  version "10.27.1"
+  resolved "https://registry.yarnpkg.com/liquidjs/-/liquidjs-10.27.1.tgz#4cd3ac2a8590bae0d415572161978b26f72e944b"
+  integrity sha512-ylE+1q2kSef1UxAyxqbyuWM3FRWS1v48JK1Y3CoW3bD6TSNXZh0+GsVnihujEpKyR+Jejx2aRAFfC3AHm9rElg==
   dependencies:
     commander "^10.0.0"
 
@@ -675,7 +675,7 @@ luxon@^3.7.2:
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.2.tgz#d697e48f478553cca187a0f8436aff468e3ba0ba"
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
 
-markdown-it@^14.1.0, markdown-it@^14.1.1:
+markdown-it@^14.1.1:
   version "14.1.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-14.1.1.tgz#856f90b66fc39ae70affd25c1b18b581d7deee1f"
   integrity sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==
